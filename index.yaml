@@ -1,4 +1,4 @@
-- &exaone_1_2b_q4
+- &exaone
   url: "github:Galygious/Localai/exaone.yaml@main"
   name: "exaone-4.0-1.2b-q4_k_m"
   license: "EXAONE AI Model License Agreement 1.2 - NC"
