@@ -23,5 +23,5 @@
       model: EXAONE-4.0-1.2B-Q4_K_M.gguf
   files:
     - filename: EXAONE-4.0-1.2B-Q4_K_M.gguf
-      sha256: fa02ceaa9abd917c7421a05e05a02dba7e3f23008e72270a7e766d44fc8b168c
+      sha256: 7b5e753540183ae4d56e6febd9b48cdd944de53386e6faa8f51c8f98cb2b47df
       uri: huggingface://LGAI-EXAONE/EXAONE-4.0-1.2B-GGUF/EXAONE-4.0-1.2B-Q4_K_M.gguf
