@@ -1,4 +1,5 @@
 - &exaone_1_2b_q4
+  url: "github:Galygious/Localai/exaone.yaml@main"
   name: "exaone-4.0-1.2b-q4_k_m"
   license: "EXAONE AI Model License Agreement 1.2 - NC"
   tags:
@@ -15,12 +16,12 @@
     - https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-1.2B-GGUF
   description: |
     EXAONE 4.0 1.2B is a multilingual model designed for on-device applications.
-    It supports reasoning (<think>) mode, agentic tool use, and long context (65k).
+    It supports reasoning (<think>) mode, agentic tool use, and long context (65k).  
     This entry provides the Q4_K_M GGUF quantized version for efficient inference.
   overrides:
     parameters:
       model: EXAONE-4.0-1.2B-Q4_K_M.gguf
   files:
     - filename: EXAONE-4.0-1.2B-Q4_K_M.gguf
-      sha256: "fa02ceaa9abd917c7421a05e05a02dba7e3f23008e72270a7e766d44fc8b168c"
+      sha256: fa02ceaa9abd917c7421a05e05a02dba7e3f23008e72270a7e766d44fc8b168c
       uri: huggingface://LGAI-EXAONE/EXAONE-4.0-1.2B-GGUF/EXAONE-4.0-1.2B-Q4_K_M.gguf
