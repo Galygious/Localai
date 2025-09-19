@@ -10,7 +10,7 @@
     - multilingual
     - cpu
     - gpu
-  icon: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+  icon: "https://cdn-avatars.huggingface.co/v1/production/uploads/66a899a72f11aaf66001a8dc/UfdrP3GMo9pNT62BaMnhw.png"
   urls:
     - https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-1.2B
     - https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-1.2B-GGUF
