@@ -22,5 +22,5 @@
       model: EXAONE-4.0-1.2B-Q4_K_M.gguf
   files:
     - filename: EXAONE-4.0-1.2B-Q4_K_M.gguf
-      sha256: ""   # fill in later with real checksum or leave empty
+      sha256: "fa02ceaa9abd917c7421a05e05a02dba7e3f23008e72270a7e766d44fc8b168c"
       uri: huggingface://LGAI-EXAONE/EXAONE-4.0-1.2B-GGUF/EXAONE-4.0-1.2B-Q4_K_M.gguf
