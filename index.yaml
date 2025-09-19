@@ -1,5 +1,4 @@
-- &exaone_1_2b_q4
-  name: "exaone-4.0-1.2b-q4_k_m"
+- name: "exaone-4.0-1.2b-q4_k_m"
   url: "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-1.2B-GGUF"
   license: "EXAONE AI Model License Agreement 1.2 - NC"
   tags:
