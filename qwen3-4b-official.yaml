@@ -1,20 +1,20 @@
-name: qwen3-4b-instruct-2507-official
-model: Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf
 backend: vulkan-llama-cpp
-
-# Model parameters optimized for instruction following
 context_size: 32768
-gpu_layers: 35
 f16: true
-threads: 4
-
-# Official recommended sampling parameters from Hugging Face
-temperature: 0.7
-top_p: 0.8
-top_k: 20
-min_p: 0.0
-
-# Official Qwen3 chat template
+gpu_layers: 35
+model: Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf
+name: qwen3-4b-instruct-2507-official
+parameters:
+  model: Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf
+  temperature: 0.7
+  top_p: 0.8
+  top_k: 20
+  context_size: 32768
+  gpu_layers: 35
+stopwords:
+  - "<|im_end|>"
+  - "<|endoftext|>"
+  - "</s>"
 template:
   chat: |
     <|im_start|>system
@@ -22,22 +22,7 @@ template:
     <|im_start|>user
     {{.Input}}<|im_end|>
     <|im_start|>assistant
-  completion: |
-    {{.Input}}
-
-# Stop words for Qwen3
-stopwords:
-  - "<|im_end|>"
-  - "<|endoftext|>"
-  - "</s>"
-
-# Parameters section for LocalAI compatibility
-parameters:
-  model: Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf
-  backend: vulkan-llama-cpp
-  temperature: 0.7
-  top_p: 0.8
-  top_k: 20
-  min_p: 0.0
-  context_size: 32768
-  gpu_layers: 35
+temperature: 0.7
+threads: 4
+top_k: 20
+top_p: 0.8
