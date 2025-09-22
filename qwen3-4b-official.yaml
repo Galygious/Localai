@@ -1,28 +1,26 @@
-backend: vulkan-llama-cpp
-context_size: 32768
-f16: true
-gpu_layers: 35
-model: Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf
-name: qwen3-4b-instruct-2507-official
-parameters:
-  model: Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf
+---
+name: "qwen3-4b-instruct-2507-official"
+
+config_file: |
+  backend: "vulkan-llama-cpp"
+  model: "Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf"
+  context_size: 32768
+  gpu_layers: 35
+  f16: true
+  threads: 4
   temperature: 0.7
   top_p: 0.8
   top_k: 20
-  context_size: 32768
-  gpu_layers: 35
-stopwords:
-  - "<|im_end|>"
-  - "<|endoftext|>"
-  - "</s>"
-template:
-  chat: |
-    <|im_start|>system
-    You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
-    <|im_start|>user
-    {{.Input}}<|im_end|>
-    <|im_start|>assistant
-temperature: 0.7
-threads: 4
-top_k: 20
-top_p: 0.8
+  
+  template:
+    chat: |
+      <|im_start|>system
+      You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+      <|im_start|>user
+      {{.Input}}<|im_end|>
+      <|im_start|>assistant
+  
+  stopwords:
+    - "<|im_end|>"
+    - "<|endoftext|>"
+    - "</s>"
