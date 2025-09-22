@@ -2,19 +2,19 @@ name: qwen3-4b-instruct-2507-official
 model: Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf
 backend: vulkan-llama-cpp
 
-# Official Qwen3 optimized parameters based on Hugging Face recommendations
+# Model parameters optimized for instruction following
 context_size: 32768
 gpu_layers: 35
 f16: true
 threads: 4
 
-# Recommended sampling parameters from official documentation
+# Official recommended sampling parameters from Hugging Face
 temperature: 0.7
 top_p: 0.8
 top_k: 20
 min_p: 0.0
 
-# Official Qwen3 chat template (updated for 2507 version)
+# Official Qwen3 chat template
 template:
   chat: |
     <|im_start|>system
@@ -24,31 +24,20 @@ template:
     <|im_start|>assistant
   completion: |
     {{.Input}}
-  chat_message: |
-    <|im_start|>{{.RoleName}}
-    {{.Content}}<|im_end|>
 
-# Official stop words for Qwen3
+# Stop words for Qwen3
 stopwords:
   - "<|im_end|>"
   - "<|endoftext|>"
   - "</s>"
 
-# Parameters section for LocalAI
+# Parameters section for LocalAI compatibility
 parameters:
   model: Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf
+  backend: vulkan-llama-cpp
   temperature: 0.7
   top_p: 0.8
   top_k: 20
   min_p: 0.0
   context_size: 32768
   gpu_layers: 35
-
-# Feature flags optimized for instruction following
-known_usecases:
-  - FLAG_CHAT
-  - FLAG_COMPLETION
-  - FLAG_ANY
-
-# Enhanced capabilities
-feature_flags: {}

@@ -35,8 +35,10 @@
     
     Perfect for n8n workflows, creative writing, reasoning tasks, and complex instruction following.
   overrides:
+    backend: vulkan-llama-cpp
     parameters:
       model: Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf
+      backend: vulkan-llama-cpp
       temperature: 0.7
       top_p: 0.8
       top_k: 20
