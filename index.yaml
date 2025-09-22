@@ -1,5 +1,5 @@
-- &qwen3-4b-official
-  url: "github:Galygious/Localai/qwen3-4b-official.yaml@main"
+- &qwen3-4b-instruct-2507
+  url: "github:Galygious/Localai/qwen3-4b-instruct-2507.yaml@main"
   name: "qwen3-4b-instruct-2507-official"
   license: "Apache 2.0"
   tags:
@@ -34,16 +34,6 @@
     - ZebraLogic: 80.2% (vs 35.2% previous version)
     
     Perfect for n8n workflows, creative writing, reasoning tasks, and complex instruction following.
-  overrides:
-    backend: vulkan-llama-cpp
-    parameters:
-      model: Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf
-      backend: vulkan-llama-cpp
-      temperature: 0.7
-      top_p: 0.8
-      top_k: 20
-      context_size: 32768
-      gpu_layers: 35
   files:
     - filename: Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf
       sha256: ""
