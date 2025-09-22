@@ -1,34 +1,6 @@
-- &exaone
-  url: "github:Galygious/Localai/exaone.yaml@main"
-  name: "exaone-4.0-1.2b-q4_k_m"
-  license: "EXAONE AI Model License Agreement 1.2 - NC"
-  tags:
-    - gguf
-    - exaone
-    - text-to-text
-    - reasoning
-    - multilingual
-    - cpu
-    - gpu
-  icon: "https://cdn-avatars.huggingface.co/v1/production/uploads/66a899a72f11aaf66001a8dc/UfdrP3GMo9pNT62BaMnhw.png"
-  urls:
-    - https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-1.2B
-    - https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-1.2B-GGUF
-  description: |
-    EXAONE 4.0 1.2B is a multilingual model designed for on-device applications.
-    It supports reasoning (<think>) mode, agentic tool use, and long context (65k).  
-    This entry provides the Q4_K_M GGUF quantized version for efficient inference.
-  overrides:
-    parameters:
-      model: EXAONE-4.0-1.2B-Q4_K_M.gguf
-  files:
-    - filename: EXAONE-4.0-1.2B-Q4_K_M.gguf
-      sha256: 7b5e753540183ae4d56e6febd9b48cdd944de53386e6faa8f51c8f98cb2b47df
-      uri: huggingface://LGAI-EXAONE/EXAONE-4.0-1.2B-GGUF/EXAONE-4.0-1.2B-Q4_K_M.gguf
-
-- &qwen3-4b
-  url: "github:Galygious/Localai/qwen3-4b.yaml@main"
-  name: "qwen3-4b-instruct-2507-q4_k_m"
+- &qwen3-4b-official
+  url: "github:Galygious/Localai/qwen3-4b-official.yaml@main"
+  name: "qwen3-4b-instruct-2507-official"
   license: "Apache 2.0"
   tags:
     - gguf
@@ -36,6 +8,9 @@
     - text-to-text
     - instruction-following
     - multilingual
+    - reasoning
+    - coding
+    - tool-usage
     - cpu
     - gpu
   icon: "https://cdn-avatars.huggingface.co/v1/production/uploads/1664629393395-5e4f2c6b02b93dd21a8cd8dd.png"
@@ -43,15 +18,28 @@
     - https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507
     - https://huggingface.co/bartowski/Qwen_Qwen3-4B-Instruct-2507-GGUF
   description: |
-    Qwen3-4B-Instruct-2507 is a 4-billion parameter instruction-tuned language model developed by Alibaba Cloud.
-    It excels in instruction following, logical reasoning, mathematics, coding, and tool usage with enhanced multilingual capabilities.
-    Supports up to 262,144 tokens context length, making it perfect for complex reasoning and long-form content generation.
-    This Q4_K_M quantized version provides excellent performance with reduced memory usage, ideal for n8n workflows.
+    **Official Qwen3-4B-Instruct-2507** - The latest and most advanced 4B instruction-tuned model from Alibaba Cloud.
+    
+    **Key Improvements:**
+    - Significant improvements in instruction following, logical reasoning, text comprehension, mathematics, science, coding and tool usage
+    - Substantial gains in long-tail knowledge coverage across multiple languages  
+    - Markedly better alignment with user preferences in subjective and open-ended tasks
+    - Enhanced capabilities in 256K long-context understanding
+    - Native support for 262,144 tokens context length
+    
+    **Performance Highlights:**
+    - AIME25: 47.4% (vs 19.1% previous version)
+    - Arena-Hard v2: 43.4% (vs 9.5% previous version)  
+    - Creative Writing v3: 83.5% (vs 53.6% previous version)
+    - ZebraLogic: 80.2% (vs 35.2% previous version)
+    
+    Perfect for n8n workflows, creative writing, reasoning tasks, and complex instruction following.
   overrides:
     parameters:
       model: Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf
       temperature: 0.7
       top_p: 0.8
+      top_k: 20
       context_size: 32768
       gpu_layers: 35
   files:
